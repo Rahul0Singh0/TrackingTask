@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
+import "./App.css";
 
 export default function App(): JSX.Element {
 
@@ -25,9 +26,9 @@ export default function App(): JSX.Element {
     }, [todos]);
 
     return (
-        <>
-           <TodoInput onSubmit={onTodoFormSubmit}/>
-           <TodoList listOfTodos={todos} onDeleteTodo={memoDeleteTodoCallback} />
-        </>
+        <div className="place-items-center">
+          <TodoInput onSubmit={onTodoFormSubmit} />
+          <TodoList listOfTodos={todos} onDeleteTodo={memoDeleteTodoCallback} />
+        </div>
     );
 }

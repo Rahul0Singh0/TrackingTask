@@ -9,7 +9,7 @@ function TodoListItem({ todo, onDelete }: T): JSX.Element {
 
     return(
         <>
-           <li>
+           <li className="list-disc">
             {todo}
             <button onClick={() => onDelete(todo)}>X</button>
            </li>

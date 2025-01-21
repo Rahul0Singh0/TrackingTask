@@ -13,14 +13,18 @@ function TodoInput({ onSubmit }: T): JSX.Element {
     }
     return (
         <>
+           <h1 className="text-5xl font-bold mb-4">Tracking Task</h1>
            <form onSubmit={onFormSubmit}>
-              <input 
+              <input
+                className="border-2 border-gray-500 p-2 rounded-md "
                 type="text"
                 placeholder="Add your todo here"
                 onChange={(e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
                 value={value}
               />
-              <button type="submit">Add Todo</button>
+              <button className="ml-5 bg-slate-600 text-white w-20 h-11 rounded-md" type="submit">
+                Add Task
+              </button>
            </form>
         </>
     );
