@@ -6,8 +6,8 @@ export default function App(): JSX.Element {
 
     const [todos, setTodos] = useState<string[]>([]);
 
-    function deleteTodoById(id: string): void {
-        const newTodos = todos.filter(todo => todo !== id);
+    function deleteTodoById(todo: string): void {
+        const newTodos = todos.filter(t => t !== todo);
         console.log(newTodos);
         setTodos(newTodos);
     }

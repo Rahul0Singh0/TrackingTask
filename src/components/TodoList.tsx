@@ -18,7 +18,7 @@ function TodoList({ listOfTodos, onDeleteTodo }: T): JSX.Element{
         <>
            <ul>
             {listOfTodos?.map((todo) => {
-                return <TodoListItem todo={todo} onDelete={memoDeleteTodoCallback} />
+                return <TodoListItem todo={todo} key={todo} onDelete={memoDeleteTodoCallback} />
             })}
            </ul>
         </>
